@@ -29,3 +29,7 @@ for fila in tabla.find_all("tr"):
                 print("Valor:", price)
             nroCelda=nroCelda+1
     nroFila=nroFila+1
+
+with open('bolsa.csv', 'a') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow([name, price, datetime.now()])
